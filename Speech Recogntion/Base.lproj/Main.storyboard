@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3DM-w0-K5Q">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Speech View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SpeechViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SpeechViewController" customModule="Speech_Recogntion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbd-IB-eVp">
+                                <rect key="frame" x="20" y="64" width="335" height="694"/>
+                                <state key="normal" title="Disiss btn"/>
+                                <connections>
+                                    <action selector="dismissBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ehi-oY-d6A"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aia-ID-rJW" customClass="CardExtensionView" customModule="Speech_Recogntion" customModuleProvider="target">
+                                <rect key="frame" x="50" y="279" width="275" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVt-24-gqC">
+                                        <rect key="frame" x="97.666666666666657" y="128" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="YEo-7F-Kxe"/>
+                                            <constraint firstAttribute="height" constant="80" id="kZP-Hf-yiH"/>
+                                        </constraints>
+                                        <state key="normal" image="microphone.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="RecordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghR-LP-HXY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MU-E3-eKq">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="mte-sR-rQM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jVt-24-gqC" firstAttribute="top" secondItem="6MU-E3-eKq" secondAttribute="bottom" constant="48" id="0rs-4e-zUU"/>
+                                    <constraint firstItem="jVt-24-gqC" firstAttribute="centerX" secondItem="6MU-E3-eKq" secondAttribute="centerX" id="0ty-5p-ygL"/>
+                                    <constraint firstItem="6MU-E3-eKq" firstAttribute="leading" secondItem="aia-ID-rJW" secondAttribute="leading" id="8ff-gr-fIN"/>
+                                    <constraint firstAttribute="height" constant="250" id="VYn-V4-Xgw"/>
+                                    <constraint firstAttribute="trailing" secondItem="6MU-E3-eKq" secondAttribute="trailing" id="obp-1m-UB9"/>
+                                    <constraint firstItem="6MU-E3-eKq" firstAttribute="top" secondItem="aia-ID-rJW" secondAttribute="top" id="tEK-gY-p8v"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rbd-IB-eVp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6iX-4r-tZj"/>
+                            <constraint firstItem="Rbd-IB-eVp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="DW9-Oo-q28"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rbd-IB-eVp" secondAttribute="bottom" constant="20" id="U6i-Vh-dbh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aia-ID-rJW" secondAttribute="trailing" constant="50" id="mvB-Pj-L3f"/>
+                            <constraint firstItem="aia-ID-rJW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="scQ-N3-Qrd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rbd-IB-eVp" secondAttribute="trailing" constant="20" id="ue5-TL-E3W"/>
+                            <constraint firstItem="aia-ID-rJW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="235" id="w0e-nk-6n8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="SpeechButton" destination="jVt-24-gqC" id="rgU-im-uwG"/>
+                        <outlet property="searchText" destination="6MU-E3-eKq" id="khh-dN-sfk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="135.96059113300493"/>
+        </scene>
+        <!--Listing View Controller-->
+        <scene sceneID="aty-gY-ZLn">
+            <objects>
+                <viewController storyboardIdentifier="ListingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3DM-w0-K5Q" customClass="ListingViewController" customModule="Speech_Recogntion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hGi-ol-kq7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="99H-gS-dBm">
+                                <rect key="frame" x="148" y="290" width="79" height="42.333333333333314"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="START">
+                                            <attributes>
+                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <font key="NSFont" size="26" name=".SFNSDisplay"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="GotoSpeech:" destination="3DM-w0-K5Q" eventType="touchUpInside" id="HFT-vZ-YbP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0g-3X-xNO">
+                                <rect key="frame" x="8" y="746" width="359" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.086274509799999996" green="0.62352941179999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="99H-gS-dBm" firstAttribute="centerX" secondItem="uai-MA-o6A" secondAttribute="centerX" id="2sU-mp-lxd"/>
+                            <constraint firstItem="o0g-3X-xNO" firstAttribute="leading" secondItem="uai-MA-o6A" secondAttribute="leading" constant="8" id="9UU-Ve-nJn"/>
+                            <constraint firstItem="uai-MA-o6A" firstAttribute="bottom" secondItem="o0g-3X-xNO" secondAttribute="bottom" constant="8" id="AlD-NF-92b"/>
+                            <constraint firstItem="99H-gS-dBm" firstAttribute="centerY" secondItem="uai-MA-o6A" secondAttribute="centerY" constant="-100" id="AtS-dp-FU3"/>
+                            <constraint firstItem="uai-MA-o6A" firstAttribute="trailing" secondItem="o0g-3X-xNO" secondAttribute="trailing" constant="8" id="Ov5-Gy-EfG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uai-MA-o6A"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="o0g-3X-xNO" id="2vI-96-myX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTf-nD-rhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="microphone.png" width="512" height="512"/>
+    </resources>
+</document>
